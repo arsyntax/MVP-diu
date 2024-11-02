@@ -1,35 +1,8 @@
-# frontend-sample-app
+# React + Vite
 
-Basic Frontend Development Environment to start an app with Webpack
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-This repo includes `Webpack` to start an environment to build frontend views using `React`.
+Currently, two official plugins are available:
 
-### Requirements
-
-- Node >= 16.13.1
-- npm >= 8.1.2
-
-### Quick start
-
-Install dependences
-
-```
-npm install
-```
-
-Launch environment
-
-```
-npm run dev
-```
-
-Now you can open http://localhost:5050
-
-### Packages included
-
-- [Webpack](https://webpack.js.org/)
-- [React Router](https://reactrouter.com/en/main)
-
-### About stylesheets
-
-- Sample stylesheets were written using the [BEM](https://getbem.com/) structure
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
