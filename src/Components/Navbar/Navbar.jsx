@@ -14,7 +14,7 @@ export default function NavBar() {
         
         {/* Logo siempre visible y centrado */}
 
-        <Navbar.Brand href="#home" className='navbar-logo'>
+        <Navbar.Brand href="/" className='navbar-logo'>
           <img 
             src={logo}
             alt="Logo"
@@ -25,14 +25,14 @@ export default function NavBar() {
         <Navbar.Collapse id="basic-navbar-nav" className='navbar-collapse'>
           <Nav className="me-auto left-nav">
             <Nav.Link href="/">Home</Nav.Link>
-            <Nav.Link href="/s">Servicios</Nav.Link>
-            <Nav.Link href="#nosotros">Nosotros</Nav.Link>
+            <Nav.Link href="/servicios">Servicios</Nav.Link>
+            <Nav.Link href="/nosotros">Nosotros</Nav.Link>
           </Nav>
           
           <Nav className="ms-auto right-nav">
-            <Nav.Link href="#ayuda">Ayuda</Nav.Link>
-            <Button variant="primary">Iniciar sesión</Button>
-            <Button variant="secondary">Registrarse</Button>
+            <Nav.Link href="/ayuda">Ayuda</Nav.Link>
+            <Button href="login" variant="primary">Iniciar sesión</Button>
+            <Button href="signup" variant="secondary">Registrarse</Button>
 
           </Nav>
         </Navbar.Collapse>
