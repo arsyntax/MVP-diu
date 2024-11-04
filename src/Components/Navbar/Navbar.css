@@ -15,6 +15,11 @@ body {
 
 }
 
+.text-center{
+  display: flex;
+  justify-content: center; /* Centra el logo horizontalmente */
+}
+
 .navbar-logo {
   position: absolute;
   left: 50%;

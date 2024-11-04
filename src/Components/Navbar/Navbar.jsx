@@ -13,7 +13,7 @@ export default function NavBar() {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         
         {/* Logo siempre visible y centrado */}
-
+        <div className='text-center'>
         <Navbar.Brand href="/" className='navbar-logo'>
           <img 
             src={logo}
@@ -21,6 +21,7 @@ export default function NavBar() {
             className='navbar-logo-img'
           />
         </Navbar.Brand>
+        </div>
         {/* Elementos colapsables */}
         <Navbar.Collapse id="basic-navbar-nav" className='navbar-collapse'>
           <Nav className="me-auto left-nav">
