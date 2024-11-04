@@ -30,7 +30,6 @@ body {
 .navbar-logo-img {
   width: 100px; /* Ajusta el tamaño según sea necesario */
   height: auto;
-  border-radius: 30px;
 }
 
 .left-nav,

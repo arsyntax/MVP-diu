@@ -3,7 +3,7 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import './Navbar.css';
 import logo from './logo.png';
-import { Button } from 'react-bootstrap';
+import { Button, Image } from 'react-bootstrap';
 
 export default function NavBar() {
   return (
@@ -15,11 +15,8 @@ export default function NavBar() {
         {/* Logo siempre visible y centrado */}
         <div className='text-center'>
         <Navbar.Brand href="/" className='navbar-logo'>
-          <img 
-            src={logo}
-            alt="Logo"
-            className='navbar-logo-img'
-          />
+            <Image src={logo} roundedCircle className='navbar-logo-img'/>
+          
         </Navbar.Brand>
         </div>
         {/* Elementos colapsables */}
