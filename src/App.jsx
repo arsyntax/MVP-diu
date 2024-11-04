@@ -1,13 +1,15 @@
+// App.jsx
+import { Routes, Route } from 'react-router-dom';
+import Home from './Components/Home/Home.jsx'; // Importa tus componentes de página
 
-import './App.css'
-
-export default function App() {
-
+function App() {
   return (
-    <div className='container'>
-    hola :v
+    <Routes>
+      <Route path="/" element={<Home />} />
 
-    </div>
-  )
+      {/* Agrega más rutas según sea necesario */}
+    </Routes>
+  );
 }
 
+export default App;
