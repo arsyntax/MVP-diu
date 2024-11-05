@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import './ScrumSurvey.css';
 import { Button } from 'react-bootstrap';
+import { useNavigate } from 'react-router-dom';
 
 function ScrumSurvey() {
   const [surveyStatus, setSurveyStatus] = useState('pendiente'); // Estado de la encuesta
   const [responses, setResponses] = useState(Array(5).fill(null)); // Estado para respuestas, inicializado con null
+  const navigate = useNavigate();
 
   const scrumValues = [
     { name: "Compromiso", description: "Is the team committed to the Sprint goal and their tasks?" },
@@ -27,15 +29,21 @@ function ScrumSurvey() {
     setResponses(newResponses);
   };
 
+  const handleSalir = () => {
+    navigate("/equipos");
+  }
+
   const handleSave = () => {
     localStorage.setItem('scrumSurveyResponses', JSON.stringify(responses)); // Guarda las respuestas en el almacenamiento local
     alert('Respuestas guardadas!'); // Mensaje de confirmación
+    navigate("/equipos");
+
   };
 
   const handleSubmit = () => {
     setSurveyStatus('completada');
     alert('Encuesta completada!'); // Mensaje de confirmación
-    
+    navigate("/equipos");
   };
 
   return (
@@ -83,7 +91,7 @@ function ScrumSurvey() {
 
       {/* Footer de la encuesta con botones de Bootstrap */}
       <footer className="footer">
-        <Button variant="danger" className="me-2">Salir</Button>
+        <Button variant="danger" className="me-2" onClick={handleSalir}>Salir</Button>
         <Button variant="info" className="me-2" onClick={handleSave}>Guardar y salir</Button>
         <Button variant="success" onClick={handleSubmit}>Enviar</Button>
       </footer>

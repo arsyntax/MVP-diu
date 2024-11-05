@@ -33,7 +33,7 @@ export default function TeamsNavBar() {
                     <button className="btn-nuevoequipo">Añadir equipo</button>
                 </Link>
 
-                <Navbar.Brand href="/perfil">
+                <Navbar.Brand href="/profile">
                     <Image src={defaultAvatar} roundedCircle className='teamsavatar'/>
                 </Navbar.Brand>
 
