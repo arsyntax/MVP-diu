@@ -1,0 +1,70 @@
+body {
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.homepage {
+    display: flex;
+    justify-content: center; /*alinea verticalmente segun el tamaño del contenedor*/
+    align-items: center;
+    flex-direction: column;
+    margin-top: 30px;
+    height: 80vh;
+    position: relative;
+}
+
+.circle {
+  position: absolute;
+  top: 50%;          /* Centra el círculo verticalmente */
+  left: 50%;         /* Centra el círculo horizontalmente */
+  transform: translate(-50%, -50%); /* Ajuste para centrar completamente */
+  width: 600px;      /* Ajusta el tamaño del círculo */
+  height: 600px;
+  background-color: #7a78fe;
+  border-radius: 50%;
+  z-index: -1;       /* Hace que esté detrás del contenido */
+
+}
+
+.rectangle {
+    position: absolute;
+    top: 50%;               /* Inicia desde la mitad de la pantalla */
+    left: 50%;              /* Centra el rectángulo horizontalmente */
+    transform: translateX(-50%); /* Centra el rectángulo horizontalmente */
+    width: 600px;           /* Ancho del rectángulo, ajusta según tus necesidades */
+    height: 50vh;            /* Altura hasta el fondo de la pantalla */
+    background-color: #7a78fe; /* Color de fondo del rectángulo */
+    z-index: -2;  
+
+}
+
+
+.info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.maintitle {
+    color: #fff; /* Color del texto */
+    text-shadow: 
+        -1px -1px 0 #000000ce,  
+        1px -1px 0 #000000ce,
+        -1px 1px 0 #000000ce,
+        1px 1px 0 #000000ce; /* Borde negro */
+}
+
+.description {
+    color: #000;
+}
+
+
+.contacto {
+    border: none;
+    align-self: center;
+    font-weight: bold;
+    font-size: 20px;
+    color:#000;
+    background-color: rgba(250, 235, 215,0.9);
+    border-radius: 4px;
+    padding: 5px 20px 5px 20px;
+
+}
