@@ -6,7 +6,7 @@ import { useLocation } from 'react-router-dom';
 
 function App() {
   const location = useLocation();
-  const excludedRoutes = ['/teams'];
+  const excludedRoutes = ['/equipos'];
   console.log(useLocation().pathname);
   
   return (
@@ -14,7 +14,9 @@ function App() {
     {!(excludedRoutes.includes(location.pathname)) && <NavBar />}
     <Routes>
       <Route path="/" element={<Home />} />
-      <Route path="/teams" element={<Teams/>}/>
+      <Route path="/equipos" element={<Teams/>}/>
+
+      <Route path="*" element={<Home />} />
       {/* Agrega más rutas según sea necesario */}
     </Routes>
     </>

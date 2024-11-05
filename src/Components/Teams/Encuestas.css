@@ -1,0 +1,45 @@
+.encuestasContainer {
+    background-color: #7B78FE; /* Color verde claro */
+    padding: 16px;
+    border-radius: 15px;
+    width: fit-content;
+    text-align: left;
+    position: relative;
+    width: 95%;
+    margin-right: 100px;
+}
+
+.encuestasTitle {
+    background-color: #ffffff; /* Fondo blanco */
+    color: #000000; /* Texto negro */
+    font-weight: bold;
+    font-size: 1.5em;
+    padding: 4px 20px;
+    border-radius: 20px;
+    display: inline-block;
+    margin-bottom: 10px;
+    position: absolute;
+    top: -12px;
+    left: -15px;
+}
+
+.encuestasList {
+    position: relative;
+    font-size: 1.5em;
+    margin-top: 1rem;
+    gap: 1rem;
+
+}
+
+.encuestaItem{
+    display: flex;
+    flex-direction: column;
+    gap: .2rem;
+}
+
+.encuestaOptions {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    margin: auto;
+}

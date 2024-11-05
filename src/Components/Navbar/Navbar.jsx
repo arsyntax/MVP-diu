@@ -2,7 +2,7 @@ import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import './Navbar.css';
-import logo from './logo.png';
+import logo from '../../assets/logo.png';
 import { Button, Image } from 'react-bootstrap';
 
 export default function NavBar() {

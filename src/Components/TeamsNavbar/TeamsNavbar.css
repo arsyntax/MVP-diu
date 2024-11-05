@@ -1,0 +1,65 @@
+body {
+    margin-top: 10px;
+  }
+  .teamsnavbarxd {
+    display: flex;
+
+    justify-content: space-between;
+    background-color: #fff;
+  }
+  
+  .teamsnavbar-logo {
+    display: flex;
+
+    margin-left: 2rem; /* Espaciado inferior si es necesario */
+
+  }
+  
+  .teamsnavbar-logo-img {
+    width: 100px; /* Ajusta el tamaño según sea necesario */
+
+  }
+  
+  .teamsleft-nav,
+  .teamsright-nav {
+    display: flex;
+    align-items: center;
+  }
+  .teamsavatar {
+    width: 80px;
+  }
+  
+  
+  .teamsleft-nav, .teamsright-nav,.teamsavatar {
+    gap: 5px;
+  }
+  
+  .teamsleft-nav:first-child {
+    margin-left: 10px;
+  }
+  
+  .teamsavatar {
+    margin-right: 10px;
+  }
+
+  .btn-nuevoequipo {
+    border-radius: 30px;
+    background-color: #7B78FE;
+    padding: 10px 10px 10px 10px;
+  }
+  /* Ajustes para colapso */
+  @media (max-width: 991px) { /* Punto de quiebre para colapso en lg */
+    .teamsnavbar-collapse {
+      flex-direction: column; /* Coloca elementos en una columna */
+      align-items: center; /* Alinea al centro */
+      width: 100%; /* Asegura que el colapso ocupe todo el ancho */
+    }
+    .teamsleft-nav,
+    .teamsright-nav {
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+    }
+
+  }
+  
