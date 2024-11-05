@@ -12,6 +12,17 @@
    border-radius: 75px
 }
 
+.profile-teamname{
+   color: #fff;
+   text-decoration: underline;
+}
+
+.profile-teamname:hover {
+   color: blue;
+   text-decoration: underline;
+   cursor: pointer;
+}
+
 h1 {
    font-size: 60px;
 }

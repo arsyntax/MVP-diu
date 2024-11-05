@@ -1,12 +1,24 @@
-import { Link } from "react-router-dom";
 import "./Encuestas.css";
+import { useNavigate } from 'react-router-dom';
+import { Button } from "react-bootstrap";
 
 export default function Encuestas() {
+    const navigate = useNavigate();
     const encuestasDisponibles = [
         { titulo: "Encuesta mes Noviembre", equipo: "Kingsoftware" },
         { titulo: "Encuesta xd", equipo: "equipo2" }
     ];
 
+    const handleResponder = () => {
+        navigate("/encuesta/responder");
+    }
+
+    const handleRecordar = () => {
+        alert("Función no implementada");
+    }
+    const handleNoResponder = () => {
+        alert("Función no implementada");
+    }
     return (
         <div className="encuestasContainer">
             <div className="encuestasTitle">Encuestas pendientes</div>
@@ -16,9 +28,9 @@ export default function Encuestas() {
                         <div key={index} className="encuestaItem">
                             <p>{encuesta.titulo} - {encuesta.equipo}</p>
                             <div className="encuestaOptions">
-                                <Link to="/encuesta/responder">Responder</Link> |
-                                <p> Recordar despues</p> |
-                                <p>  No responder</p>
+                                <p onClick={handleResponder} className="encuestaOption">Responder</p> |
+                                <p onClick={handleRecordar} className="encuestaOption"> Recordar despues</p> |
+                                <p onClick={handleRecordar} className="encuestaOption">  No responder</p>
                                 
                             </div>
                         </div>

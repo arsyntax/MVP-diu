@@ -1,5 +1,6 @@
 .encuestasContainer {
     background-color: #7B78FE; /* Color verde claro */
+    color: #fff;
     padding: 16px;
     border-radius: 15px;
     width: fit-content;
@@ -42,4 +43,11 @@
     flex-direction: row;
     gap: 1rem;
     margin: auto;
+    text-decoration: underline;
+}
+
+.encuestaOption:hover {
+    color: blue;
+    text-decoration: underline;
+    cursor: pointer;
 }

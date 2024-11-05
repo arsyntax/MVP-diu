@@ -32,7 +32,13 @@
 
 }
 
+.teamsItem {
+    color: #fff;
+    text-decoration: underline;
+}
+
 .teamsItem:hover {
+    color: blue;
     text-decoration: underline;
     cursor: pointer;
 }

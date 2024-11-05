@@ -35,7 +35,7 @@ const Profile = () => {
                   <tr>
                      <td className="profile-categoria">Equipos</td>
                      <td>:</td>
-                     <td><a href="/teaminfo">KingSoftware</a> </td>
+                     <td><a href="/teaminfo" className="profile-teamname">KingSoftware</a> </td>
                   </tr>
                </tbody>
                </table>
