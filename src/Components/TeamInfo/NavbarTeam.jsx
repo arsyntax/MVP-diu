@@ -14,10 +14,10 @@ export default function NavBar() {
   return (
     <Navbar expand="lg" className="navbart">
       <Nav className="left-nav">
-        <Button href="/Teams" className={activePage === '/Teams' ? 'but but-primary' : 'but'}>INFORMACION</Button>
-        <Button href="/Urgente" className={activePage === '/Urgente' ? 'but but-primary' : 'but'}>URGENTE</Button>
-        <Button href="/General" className={activePage === '/General' ? 'but but-primary' : 'but'}>GENERAL</Button>
-        <Button href="/Ultimo" className={activePage === '/Ultimo' ? 'but but-primary' : 'but'}>ULTIMO</Button>
+        <Button href="/teaminfo" className={activePage === '/teaminfo' ? 'but but-primary' : 'but'}>INFORMACION</Button>
+        <Button href="/urgente" className={activePage === '/urgente' ? 'but but-primary' : 'but'}>URGENTE</Button>
+        <Button href="/general" className={activePage === '/general' ? 'but but-primary' : 'but'}>GENERAL</Button>
+        <Button href="/ultimo" className={activePage === '/ultimo' ? 'but but-primary' : 'but'}>ULTIMO</Button>
       </Nav>
     </Navbar>
   );

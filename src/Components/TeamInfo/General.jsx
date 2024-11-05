@@ -1,17 +1,17 @@
-import "./Teams.css";
+import "./TeamInfo.css";
 import leon from "../../assets/leon.png";
 import NAV from "./NavbarTeam.jsx"
 import LineChart from "./LineChart.jsx";
 
-const Layout = () => {
+const General = () => {
    return (
       <div className="Page">
-         <div className="Name">
-            <img src={leon} className="logoteam"></img>
+         <div className="team-Name">
+            <img src={leon} className="team-logoteam"></img>
             <h1>KingsSoftware</h1>
          </div>
          <NAV/>
-         <div className="info">
+         <div className="team-info">
             <p>Valores del equipo a traves del tiempo</p>
             <div className="graficoL">
                <LineChart/>
@@ -21,4 +21,4 @@ const Layout = () => {
    )
 }
 
-export default Layout
+export default General;

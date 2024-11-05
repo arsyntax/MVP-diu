@@ -1,11 +1,11 @@
-.Name{
+.team-Name{
    margin-top: 10px;
    margin-bottom: 20px;
    margin-left: 50px;
    display: flex;
 }
 
-.logoteam {
+.team-logoteam {
    margin-right: 40px;
    width: 100px;
    height: 100px;
@@ -21,7 +21,10 @@ td{
    padding: 5px;
 }
 
-.info {
+.team-info {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
    margin-left: 60px;
    margin-bottom: 20px;
    padding-bottom: 50px;
@@ -33,6 +36,7 @@ td{
 }
 
 .urgente{
+
    color: red;
    font-size: 60px;
    margin-bottom: 10px;
@@ -58,6 +62,6 @@ td{
    padding: 5px;
 }
 
-.categoria{
+.team-categoria{
    text-align: right;
 }

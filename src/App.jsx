@@ -1,9 +1,9 @@
 import { Routes, Route, BrowserRouter } from 'react-router-dom';
 import Home from './Components/Home/Home.jsx'; // Importa tus componentes de página
-import Teams from './Components/Teams/Teams.jsx';
-import General from './Components/Teams/General.jsx';
-import Urgente from './Components/Teams/Urgente.jsx';
-import Ultimo from './Components/Teams/Ultimo.jsx';
+import TeamInfo from './Components/TeamInfo/TeamInfo.jsx';
+import General from './Components/TeamInfo/General.jsx';
+import Urgente from './Components/TeamInfo/Urgente.jsx';
+import Ultimo from './Components/TeamInfo/Ultimo.jsx';
 import ScrumSurvey from './Components/ScrumSurvey/ScrumSurvey.jsx';
 import Profile from "./Components/Profile/Profile.jsx"
 
@@ -12,11 +12,11 @@ function App() {
     <BrowserRouter>
     <Routes>
       <Route path="/" element={<Home />} />
-      <Route path="/Teams" element={<Teams />} />
-      <Route path="/General" element={<General />} />
-      <Route path="/Urgente" element={<Urgente />} />
-      <Route path="/Ultimo" element={<Ultimo />} />
-      <Route path="/Profile" element={<Profile />} />
+      <Route path="/teaminfo" element={<TeamInfo />} />
+      <Route path="/general" element={<General />} />
+      <Route path="/urgente" element={<Urgente />} />
+      <Route path="/ultimo" element={<Ultimo />} />
+      <Route path="/profile" element={<Profile />} />
       <Route path="/servicios/encuestas-pendientes" element={<ScrumSurvey />} />
       
       
