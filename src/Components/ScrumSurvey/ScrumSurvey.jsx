@@ -1,8 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './ScrumSurvey.css';
 import { Button } from 'react-bootstrap';
 
 function ScrumSurvey() {
+  const [surveyStatus, setSurveyStatus] = useState('pendiente'); // Estado de la encuesta
   const scrumValues = [
     { name: "Compromiso", description: "Is the team committed to the Sprint goal and their tasks?" },
     { name: "Coraje", description: "Does the team show courage to do the right thing and work on tough problems?" },
@@ -10,6 +11,11 @@ function ScrumSurvey() {
     { name: "Apertura", description: "Is the team open to feedback and transparent in communication?" },
     { name: "Respeto", description: "Does the team show respect for each other's skills and opinions?" }
   ];
+
+  const handleSubmit = () => {
+    setSurveyStatus('completada');
+    alert('Encuesta completada!'); // Mensaje de confirmación
+  };
 
   return (
     <div className="container">
@@ -56,7 +62,7 @@ function ScrumSurvey() {
       <footer className="footer">
         <Button variant="danger" className="me-2">Salir</Button>
         <Button variant="info" className="me-2">Guardar y salir</Button>
-        <Button variant="success">Enviar</Button>
+        <Button variant="success" onClick={handleSubmit}>Enviar</Button>
       </footer>
     </div>
   );
