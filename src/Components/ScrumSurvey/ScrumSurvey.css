@@ -1,0 +1,84 @@
+.container {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #A2A0FF;
+    padding: 20px;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 800px;
+    margin: auto;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.header {
+    background-color: #7A78FE;
+    padding: 10px;
+    text-align: center;
+    width: 100%;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    color: #fff;
+}
+
+.survey-container {
+    background-color: #A2A0FF;
+    padding: 20px;
+    border-radius: 10px;
+    width: 100%;
+}
+
+.question-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.question-header {
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #000;
+}
+
+.question-header span {
+    flex: 1;
+    text-align: center; /* Centra el texto del encabezado */
+}
+
+.question-row {
+    display: flex;
+    align-items: center; /* Centra verticalmente */
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.question-row span {
+    flex: 1; /* Deja espacio igual para el texto de la pregunta */
+    text-align: left; /* Alinea el texto de la pregunta a la izquierda */
+}
+
+.radio-container {
+    display: flex; /* Usar flexbox para el radio button */
+    justify-content: center; /* Centra el botón de radio */
+    flex: 1; /* Permite que crezca y ocupe espacio equitativo */
+}
+
+.radio-input {
+    margin: 0; /* Elimina el margen para los botones de radio */
+    cursor: pointer;
+    text-align: center; /* Centra el texto de los botones de radio */
+}
+
+.footer {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+.instructions {
+    margin-bottom: 20px;
+    text-align: center;
+    font-weight: bold;
+}
