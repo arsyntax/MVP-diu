@@ -13,7 +13,7 @@ const SpiderChart = () => {
       labels: ['Compromiso', 'Coraje', 'Enfoque', 'Apertura', 'Respeto'],
       datasets: [
         {
-          label: '',
+          label: 'Agosto',
           data: [19, 28, 27, 43, 39],
           backgroundColor: 'rgba(207, 206, 255, 1)',
           borderColor: 'rgba(0, 0, 0, 0.3)',
