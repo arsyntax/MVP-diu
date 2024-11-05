@@ -35,6 +35,7 @@ function ScrumSurvey() {
   const handleSubmit = () => {
     setSurveyStatus('completada');
     alert('Encuesta completada!'); // Mensaje de confirmación
+    
   };
 
   return (

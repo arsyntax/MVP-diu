@@ -3,7 +3,7 @@ import Navbar from 'react-bootstrap/Navbar';
 import './TeamsNavBar.css';
 import logo from '../../assets/logo.png';
 import defaultAvatar from '../../assets/avatar-undefined.svg'
-import { Button, Image } from 'react-bootstrap';
+import { Image } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 
 export default function TeamsNavBar() {

@@ -28,7 +28,7 @@ function App() {
       <Route path="/urgente" element={<Urgente />} />
       <Route path="/ultimo" element={<Ultimo />} />
       <Route path="/profile" element={<Profile />} />
-      <Route path="/servicios/encuestas-pendientes" element={<ScrumSurvey />} />
+      <Route path="/encuesta/responder" element={<ScrumSurvey />} />
       
       {/* Ruta default por si se entra a un link que no existe */}
       <Route path="*" element={<Home />} />

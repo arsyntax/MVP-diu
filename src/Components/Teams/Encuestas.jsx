@@ -16,7 +16,7 @@ export default function Encuestas() {
                         <div key={index} className="encuestaItem">
                             <p>{encuesta.titulo} - {encuesta.equipo}</p>
                             <div className="encuestaOptions">
-                                <Link to="/encuesta">Responder</Link> |
+                                <Link to="/encuesta/responder">Responder</Link> |
                                 <p> Recordar despues</p> |
                                 <p>  No responder</p>
                                 
