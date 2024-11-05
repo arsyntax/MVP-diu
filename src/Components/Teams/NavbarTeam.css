@@ -1,0 +1,17 @@
+.navbart{
+   margin-left: 70px;
+}
+
+.but{
+   margin: 5px;
+   background-color: #ffff;
+   border-color: black;
+   color: black;
+   
+}
+
+.but-primary {
+   margin: 5px;
+   background-color: #7A78FE;
+   border-color: white;
+}
