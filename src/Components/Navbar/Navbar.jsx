@@ -13,14 +13,14 @@ export default function NavBar() {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         
         {/* Logo siempre visible y centrado */}
-        <div className='text-center'>
-        <Navbar.Brand href="/" className='navbar-logo'>
-            <Image src={logo} roundedCircle className='navbar-logo-img'/>
-          
-        </Navbar.Brand>
-        </div>
         {/* Elementos colapsables */}
         <Navbar.Collapse id="basic-navbar-nav" className='navbar-collapse'>
+          <div className='text-center'>
+          <Navbar.Brand href="/" className='navbar-logo'>
+              <Image src={logo} roundedCircle className='navbar-logo-img'/>
+            
+          </Navbar.Brand>
+          </div>
           <Nav className="me-auto left-nav">
             <Nav.Link href="/">Home</Nav.Link>
             <Nav.Link href="/servicios">Servicios</Nav.Link>
