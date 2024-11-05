@@ -5,6 +5,7 @@ import General from './Components/Teams/General.jsx';
 import Urgente from './Components/Teams/Urgente.jsx';
 import Ultimo from './Components/Teams/Ultimo.jsx';
 import ScrumSurvey from './Components/ScrumSurvey/ScrumSurvey.jsx';
+import Profile from "./Components/Profile/Profile.jsx"
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
       <Route path="/General" element={<General />} />
       <Route path="/Urgente" element={<Urgente />} />
       <Route path="/Ultimo" element={<Ultimo />} />
+      <Route path="/Profile" element={<Profile />} />
       <Route path="/servicios/encuestas-pendientes" element={<ScrumSurvey />} />
       
       

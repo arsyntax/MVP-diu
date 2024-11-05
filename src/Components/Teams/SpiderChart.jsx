@@ -15,7 +15,7 @@ const SpiderChart = () => {
         {
           label: 'Agosto',
           data: [19, 28, 27, 43, 39],
-          backgroundColor: 'rgba(207, 206, 255, 1)',
+          backgroundColor: 'rgba(207, 206, 255, 0.6)',
           borderColor: 'rgba(0, 0, 0, 0.3)',
           borderWidth: 1,
           fill: true,

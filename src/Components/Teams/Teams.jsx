@@ -11,10 +11,32 @@ const Layout = () => {
          </div>
          <NAV/>
          <div className="info">
-            <p>Nombre equipo: KingSoftware</p>
-            <p>Encargado: Matias Ferrero</p>
-            <p>Numero de participantes: 6</p>
-            <p>Fecha de creacino: 10/09/2018</p>
+            <div className="table-container">
+               <table className="simple-table">
+                  <tbody>
+                     <tr>
+                        <td className="categoria">Nombre equipo</td>
+                        <td>:</td>
+                        <td>KingSoftware</td>
+                     </tr>
+                     <tr>
+                        <td className="categoria">Encargado</td>
+                        <td>:</td>
+                        <td>Matias Ferrero</td>
+                     </tr>
+                     <tr>
+                        <td className="categoria">Numero de participantes</td>
+                        <td>:</td>
+                        <td>6</td>
+                     </tr>
+                     <tr>
+                        <td className="categoria">Fecha de creacion</td>
+                        <td>:</td>
+                        <td>10/09/2018</td>
+                     </tr>
+                  </tbody>
+               </table>
+            </div>
          </div>
       </div>
    )
