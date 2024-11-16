@@ -1,11 +1,28 @@
 import "./Encuestas.css";
+import { useState, useEffect } from "react";
 import { EncuestaCard } from "./EncuestaCard";
 
 export default function Encuestas() {
-    const encuestasDisponibles = [
-        { titulo: "Encuesta mes Noviembre", equipo: "Kingsoftware", respondida: false },
-        { titulo: "Encuesta xd", equipo: "equipo2", respondida: false }
-    ];
+    const [encuestasDisponibles, setEncuestasDisponibles] = useState([]);
+
+    // Cargar el JSON dinámicamente
+    useEffect(() => {
+        const fetchEncuestas = async () => {
+            try {
+                const response = await fetch("/data/encuestas.json");
+                if (!response.ok) {
+                    throw new Error("Error al cargar las encuestas");
+                }
+                const data = await response.json();
+                setEncuestasDisponibles(data.encuestasDisponibles);
+            } catch (error) {
+                console.error("Error:", error);
+            }
+        };
+
+        fetchEncuestas();
+    }, []);
+
     return (
         <div className="encuestasContainer">
             <div className="encuestasTitle">Encuestas pendientes</div>
@@ -14,7 +31,7 @@ export default function Encuestas() {
                     encuestasDisponibles.map((encuesta, index) => (
                         (!encuesta.respondida ? 
                             <EncuestaCard key={index} id={index} encuesta={encuesta} />
-                            : <></>
+                            : null
                         )
                     ))
                 ) : (
