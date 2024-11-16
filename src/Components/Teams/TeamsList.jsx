@@ -12,7 +12,7 @@ export default function TeamsList() {
             <div className="teamsTitle">Equipos</div>
             <div className="teamsList">
                 {equiposLista.length > 0 ? (equiposLista.map((equipo, index) => (
-                    <Link to="/profile">
+                    <Link to="/teaminfo">
                         <div className="teamsItem">
                             <p>{equipo.id} - {equipo.nombre}</p>
                         </div>
