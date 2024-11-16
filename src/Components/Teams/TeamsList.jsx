@@ -1,5 +1,5 @@
 import './TeamsList.css';
-import { Link } from 'react-router-dom';
+import { TeamCard } from './TeamCard';
 
 export default function TeamsList() {
     var equiposLista = [
@@ -11,15 +11,13 @@ export default function TeamsList() {
         <div className="teamsListContainer">
             <div className="teamsTitle">Equipos</div>
             <div className="teamsList">
-                {equiposLista.length > 0 ? (equiposLista.map((equipo, index) => (
-                    <Link to="/teaminfo">
-                        <div className="teamsItem">
-                            <p>{equipo.id} - {equipo.nombre}</p>
-                        </div>
-                    </Link>
+                {equiposLista.length === 0 ? (
+                    <p>No hay equipos registrados</p>
+                ): (
+                    equiposLista.map((equipo, index) => (
+                        <TeamCard key={index} equipo={equipo} />
                     ))
-                ):
-                (<p>No hay equipos registrados</p>)
+                )
                 }
             </div>
         </div>
