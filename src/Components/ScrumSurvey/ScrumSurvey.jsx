@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import './ScrumSurvey.css';
 import { Button } from 'react-bootstrap';
-import { useNavigate } from 'react-router-dom';
+import { useParams, useNavigate } from 'react-router-dom';
 
 function ScrumSurvey() {
+  const { id } = useParams();
   const [surveyStatus, setSurveyStatus] = useState('pendiente'); // Estado de la encuesta
   const [responses, setResponses] = useState(Array(5).fill(null)); // Estado para respuestas, inicializado con null
   const navigate = useNavigate();
@@ -17,7 +18,7 @@ function ScrumSurvey() {
   ];
 
   useEffect(() => {
-    const savedResponses = localStorage.getItem('scrumSurveyResponses');
+    const savedResponses = localStorage.getItem(`scrumSurveyResponses-${id}`);
     if (savedResponses) {
       setResponses(JSON.parse(savedResponses)); // Cargar respuestas guardadas
     }
@@ -34,17 +35,26 @@ function ScrumSurvey() {
   }
 
   const handleSave = () => {
-    localStorage.setItem('scrumSurveyResponses', JSON.stringify(responses)); // Guarda las respuestas en el almacenamiento local
+    localStorage.setItem(`scrumSurveyResponses-${id}`, JSON.stringify(responses)); // Guarda las respuestas en el almacenamiento local
     alert('Respuestas guardadas!'); // Mensaje de confirmación
     navigate("/equipos");
 
   };
 
   const handleSubmit = () => {
+    // Verificar si todas las respuestas están seleccionadas (ninguna debe ser null)
+    if (responses.includes(null)) {
+      alert('Por favor, responde todas las preguntas antes de enviar la encuesta.');
+      return; // Salir de la función si alguna respuesta está vacía
+    }
+  
     setSurveyStatus('completada');
-    alert('Encuesta completada!'); // Mensaje de confirmación
+    // Marca la encuesta como respondida
+    localStorage.setItem(`encuestaRespondida-${id}`, 'true');
+    alert('Encuesta completada!');
     navigate("/equipos");
   };
+  
 
   return (
     <div className="container">

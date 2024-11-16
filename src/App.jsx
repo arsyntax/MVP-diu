@@ -15,7 +15,7 @@ import Profile from "./Components/Profile/Profile.jsx"
 function App() {
   const location = useLocation();
   const excludedRoutes = ['/equipos'];
-  console.log(useLocation().pathname);
+  //console.log(useLocation().pathname);
   
   return (
     <>
@@ -28,7 +28,7 @@ function App() {
       <Route path="/urgente" element={<Urgente />} />
       <Route path="/ultimo" element={<Ultimo />} />
       <Route path="/profile" element={<Profile />} />
-      <Route path="/encuesta/responder" element={<ScrumSurvey />} />
+      <Route path="/encuesta/:id" element={<ScrumSurvey />} />
       
       {/* Ruta default por si se entra a un link que no existe */}
       <Route path="*" element={<Home />} />
