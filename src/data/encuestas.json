@@ -1,0 +1,14 @@
+{
+    "encuestasDisponibles": [
+      {
+        "titulo": "Encuesta mes Noviembre",
+        "equipo": "Kingsoftware",
+        "respondida": false
+      },
+      {
+        "titulo": "Encuesta xd",
+        "equipo": "equipo2",
+        "respondida": false
+      }
+    ]
+  }
