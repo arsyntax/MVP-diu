@@ -13,13 +13,12 @@ const Ultimo = () => {
          <NAV/>
          <div className="team-info">
             <p>Resultados de la ultima encuesta:</p>
-            <p>Numero de participantes: 5</p>
-            <p>Fecha de realizacion: 05/11/2024</p>
+            <p>Numero de participantes: 1</p>
+            <p>Fecha de realizacion: 18/11/2024</p>
             <div className="graficoS">
                <SpiderChart/>
             </div>
          </div>
-         
       </div>
    )
 }

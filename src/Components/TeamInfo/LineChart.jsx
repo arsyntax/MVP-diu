@@ -1,20 +1,22 @@
 import React, { useRef, useEffect } from 'react';
 import { Chart, registerables } from 'chart.js';
-
-Chart.register(...registerables); // Registra todos los componentes de Chart.js
+import { useParams } from "react-router-dom";
+Chart.register(...registerables);
 
 const LineChart = () => {
   const canvasRef = useRef(null);
+  const { id } = useParams();
+  const store = JSON.parse(localStorage.getItem(`scrumSurveyResponses-${id}`)) || {};
 
   useEffect(() => {
     const ctx = canvasRef.current.getContext('2d');
 
     const data = {
-      labels: ['Abril', 'Mayo', 'Junio', 'Julio', 'Agosto'], // Etiquetas de tiempo
+      labels: ['Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre'],
       datasets: [
         {
           label: 'Compromiso',
-          data: [60, 50, 67, 52, 39], // Datos de compromiso
+          data: [1, 2, 3, 3, store[0] || 0],
           borderColor: 'rgba(255, 99, 132, 1)',
           backgroundColor: 'rgba(255, 99, 132, 0.2)',
           fill: false,
@@ -22,7 +24,7 @@ const LineChart = () => {
         },
         {
           label: 'Coraje',
-          data: [70, 62, 53, 44, 56], // Datos de coraje
+          data: [0, 3, 4, 2, store[1] || 0],
           borderColor: 'rgba(54, 162, 235, 1)',
           backgroundColor: 'rgba(54, 162, 235, 0.2)',
           fill: false,
@@ -30,7 +32,7 @@ const LineChart = () => {
         },
         {
           label: 'Enfoque',
-          data: [51, 60, 46, 50, 55], // Datos de enfoque
+          data: [4, 2, 1, 0, store[2] || 0],
           borderColor: 'rgba(255, 206, 86, 1)',
           backgroundColor: 'rgba(255, 206, 86, 0.2)',
           fill: false,
@@ -38,15 +40,15 @@ const LineChart = () => {
         },
         {
           label: 'Apertura',
-          data: [60, 68, 72, 79, 85], // Datos de apertura
-          borderColor: 'rgba(75, 192, 192, 1)',
+          data: [1, 1, 0, 3, store[3] || 0],
+          borderColor: 'rgba(82, 183, 44, 1)',
           backgroundColor: 'rgba(75, 192, 192, 0.2)',
           fill: false,
           tension: 0.1,
         },
         {
           label: 'Respeto',
-          data: [70, 59, 67, 72, 78], // Datos de respeto
+          data: [1, 2, 3, 1, store[4] || 0],
           borderColor: 'rgba(153, 102, 255, 1)',
           backgroundColor: 'rgba(153, 102, 255, 0.2)',
           fill: false,
@@ -76,10 +78,10 @@ const LineChart = () => {
         y: {
           title: {
             display: true,
-            text: 'Niveles (%)',
+            text: 'Niveles',
           },
           min: 0,
-          max: 100,
+          max: 5,
         },
       },
     };

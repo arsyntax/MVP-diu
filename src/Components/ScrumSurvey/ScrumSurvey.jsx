@@ -42,6 +42,7 @@ function ScrumSurvey() {
   };
 
   const handleSubmit = () => {
+    handleSave()
     // Verificar si todas las respuestas están seleccionadas (ninguna debe ser null)
     if (responses.includes(null)) {
       alert('Por favor, responde todas las preguntas antes de enviar la encuesta.');
