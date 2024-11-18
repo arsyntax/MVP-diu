@@ -29,7 +29,7 @@ export default function NavBar() {
           
           <Nav className="ms-auto right-nav">
             <Nav.Link href="/ayuda">Ayuda</Nav.Link>
-            <Button href="login" variant="primary">Iniciar sesión</Button>
+            <Button href="equipos" variant="primary">Iniciar sesión</Button>
             <Button href="signup" variant="secondary">Registrarse</Button>
 
           </Nav>
