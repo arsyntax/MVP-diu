@@ -26,6 +26,9 @@
 }
 
 .teamsList {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
     color: #ffffff; /* Texto azul */
     font-size: 1.5em;
     margin-top: 0.7em;
@@ -35,6 +38,7 @@
 .teamsItem {
     color: #fff;
     text-decoration: underline;
+    display: inline-block;  /* Cambio aquí: hace que el hover solo se aplique al texto */
 }
 
 .teamsItem:hover {

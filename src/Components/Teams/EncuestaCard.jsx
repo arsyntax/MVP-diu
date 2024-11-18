@@ -5,7 +5,7 @@ export function EncuestaCard({ id, encuesta }) {
     const navigate = useNavigate();
 
     const handleResponder = () => {
-        navigate(`/encuesta/${id}/responder`);
+        navigate(`/encuesta/${id}`);
     }
     const handleRecordar = () => {
         alert("Función no implementada");
