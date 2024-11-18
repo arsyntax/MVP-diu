@@ -24,9 +24,9 @@ function App() {
       <Route path="/" element={<Home />} />
       <Route path="/equipos" element={<Teams/>}/>
       <Route path="/teaminfo" element={<TeamInfo />} />
-      <Route path="/general" element={<General />} />
-      <Route path="/urgente" element={<Urgente />} />
-      <Route path="/ultimo" element={<Ultimo />} />
+      <Route path="/general/:id" element={<General />} />
+      <Route path="/urgente/:id" element={<Urgente />} />
+      <Route path="/ultimo/:id" element={<Ultimo />} />
       <Route path="/profile" element={<Profile />} />
       <Route path="/encuesta/:id" element={<ScrumSurvey />} />
       
