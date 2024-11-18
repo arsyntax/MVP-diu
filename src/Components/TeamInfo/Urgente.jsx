@@ -1,4 +1,4 @@
-import React from 'react';
+//import React from 'react';
 import "./TeamInfo.css";
 import leon from "../../assets/leon.png";
 import NAV from "./NavbarTeam.jsx";

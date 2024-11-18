@@ -1,9 +1,10 @@
-import Container from 'react-bootstrap/Container';
+//import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import './Navbar.css';
 import logo from '../../assets/logo.png';
-import { Button, Image } from 'react-bootstrap';
+import { Image } from 'react-bootstrap';
+import defaultAvatar from '../../assets/avatar-undefined.svg';
 
 export default function NavBar() {
   return (
@@ -23,15 +24,17 @@ export default function NavBar() {
           </div>
           <Nav className="me-auto left-nav">
             <Nav.Link href="/">Home</Nav.Link>
+            <Nav.Link href="/equipos">Equipos</Nav.Link>
             <Nav.Link href="/servicios">Servicios</Nav.Link>
             <Nav.Link href="/nosotros">Nosotros</Nav.Link>
           </Nav>
           
-          <Nav className="ms-auto right-nav">
+          <Nav className="ms-auto teamsright-nav">
             <Nav.Link href="/ayuda">Ayuda</Nav.Link>
-            <Button href="equipos" variant="primary">Iniciar sesión</Button>
-            <Button href="signup" variant="secondary">Registrarse</Button>
 
+            <Navbar.Brand href="/profile">
+            <Image src={defaultAvatar} roundedCircle className='teamsavatar'/>
+            </Navbar.Brand>
           </Nav>
         </Navbar.Collapse>
 

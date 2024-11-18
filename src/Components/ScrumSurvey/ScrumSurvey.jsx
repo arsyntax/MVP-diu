@@ -1,10 +1,11 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import './ScrumSurvey.css';
 import { Button } from 'react-bootstrap';
 import { useParams, useNavigate } from 'react-router-dom';
 
 function ScrumSurvey() {
   const { id } = useParams();
+  // eslint-disable-next-line no-unused-vars
   const [surveyStatus, setSurveyStatus] = useState('pendiente'); // Estado de la encuesta
   const [responses, setResponses] = useState(Array(5).fill(null)); // Estado para respuestas, inicializado con null
   const navigate = useNavigate();

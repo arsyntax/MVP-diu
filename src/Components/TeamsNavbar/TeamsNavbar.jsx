@@ -1,14 +1,14 @@
-import React, { useState } from 'react';
+//import { useState } from 'react';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import './TeamsNavBar.css';
 import logo from '../../assets/logo.png';
-import defaultAvatar from '../../assets/avatar-undefined.svg'
+import defaultAvatar from '../../assets/avatar-undefined.svg';
 import { Image } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 
 export default function TeamsNavBar() {
-  const [showMessage, setShowMessage] = useState(false);
+  //const [showMessage, setShowMessage] = useState(false);
 
   const handleClick = (event) => {
     // Prevenir la navegación

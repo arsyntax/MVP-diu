@@ -36,6 +36,17 @@ body {
   margin: 0 3px; /* Ajusta el espaciado a tu preferencia */
 }
 
+.teamsright-nav {
+  display: flex;
+  align-items: center;
+}
+
+.teamsavatar {
+  margin-right: 10px;
+  width: 100px;
+  height: 100px;
+}
+
 .left-nav:first-child {
   margin-left: 10px;
 }
